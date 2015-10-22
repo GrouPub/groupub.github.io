@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Project GrouPub</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+ </head> 
+	
+<body>
+  
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Project GrouPub </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide2" title="Next Section">About</a></li>
+		<li><a href="#slide3" title="Next Section">Team</a></li>
+		<li><a  href="#slide4" title="Next Section">Reports</a></li>
+		<li><a href="#slide5" title="Next Section">Contact</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+
+  	
+	<div id="slide1">
+		<div class="content">
+			<br><br><br>
+			<div class="quotes_container">
+	            <h2>A Location-based Pop Quiz Application</h2>
+			     <h3>...natural reason to meet and communicate with others</h3>
+			</div> 
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">Users of Pub Quiz will be notified of pop quizzes that will take place in different locations (like pubs or cafes).
+		    The purpose of Pub Quiz is to create an environment where users can socialize with ease since there is a clear objective of winning the pop quiz and an opportunity of participating in a group which will create a natural reason to meet and communicate with other users.
+		    </h3>
+			</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div class="quotes_container">
+			   	<table>
+			   		<tr>
+			   			<td>
+			   				<img class="team" src="img/arda.png" />
+			   			</td>
+			   			<td><h4 class="author_name_white">Arda Burak Ekmekçi </h4></td>
+			   		</tr>
+			   		<tr>
+			   			<td>
+			   				<img class="team" src="img/ayberk.png" />
+			   			</td>
+			   			<td><h4 class="author_name_white">Ayberk Aksoy</h4></td>
+			   		</tr>
+			   		<tr>
+			   			<td>
+			   				<img class="team" src="img/ekin.png" />
+			   			</td>
+			   			<td><h4 class="author_name_white">Ekin Karayalçın</h4></td>
+			   		</tr>
+			   		<tr>
+			   			<td>
+			   				<img class="team" src="img/merve.png" />
+			   			</td>
+			   			<td><h4 class="author_name_white">Merve Tuncel</h4></td>
+			   		</tr>
+			   		<tr>
+			   			<td>
+			   				<img class="team" src="img/seren.png" />
+			   			</td>
+			   			<td><h4 class="author_name_white">Seren Erdoğan</h4></td>
+			   		</tr>
+				</table>
+		    </div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content" >
+		<div class="quotes_container"><br><br><br>
+		    <h3 class="quotes"><a target="_blank" href="docs/ps.pdf">Project Specification Report</a>
+		    <h3 class="quotes"><a target="_blank" href="docs/analysis.pdf">Analysis Report</a>
+		    <h3 class="quotes"><a href="">High-Level Design Report</a>
+		    <h3 class="quotes"><a href="">Low-Level Design Report</a>
+		    <h3 class="quotes"><a href="">Final Report</a>
+		</div> 
+		</div> 
+		</div> 
+    </div> 
+	
+	<div id="slide5">
+		<div class="content">
+           <div class="quotes_container">
+		    <article id="contact" class="container 75%">
+					<header>
+						<h2>Contact us</h2>
+						<h3>We are open to suggestions or comments for improving any aspect of our application.</h3>
+						<br>
+					</header>
+					<form name="contactform" method="post" action="send_mail.php">
+ 
+<table width="450px" align="center">
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="name">Name: </label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="name" maxlength="50" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="email">Email Address: </label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="email" maxlength="80" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="subject">Subject: </label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="subject" maxlength="30" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="body">Body: </label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <textarea  name="body" maxlength="1000" cols="28" rows="6"></textarea>
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td colspan="2" style="text-align:center">
+ 
+  <input type="submit" value="Submit">
+   
+ </td>
+ 
+</tr>
+ 
+</table>
+ 
+</form>
+		  </div>  
+		  </div>
+		</div> 
+    </div> 
+
+</body>
+</html>
